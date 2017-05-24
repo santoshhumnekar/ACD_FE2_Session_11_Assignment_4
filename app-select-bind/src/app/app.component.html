@@ -1,0 +1,20 @@
+<div class="container">
+
+  <nav class="navbar navbar-light bg-inverse navbar-inverse">
+  <a class="navbar-brand">
+    <img src="./favicon.ico" width="10" height="10" class="d-inline-block align-left" alt="">
+    Angular 2 Custom Directive
+  </a>
+  </nav>
+
+  <p> Which car would you like to drive : </p>
+  <div>
+    <label>Cars :</label>
+    <select #select name="carr" [(ngModel)]="current" (change)="Dropdown(select.value)">
+        <option *ngFor="let car of cars" [value]="car.id">  
+            {{car.name}}
+        </option>
+    </select>
+</div>
+<pre>{{carSelected}}</pre>
+</div>
